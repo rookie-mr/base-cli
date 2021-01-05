@@ -10,4 +10,11 @@ program
         require('../lib/init')(name)
     })
 
+program
+    .command('refresh')
+    .description('refresh routers ')
+    .action(() => { // 执行命令后需要做什么
+        require('../lib/refresh')()
+    })
+
 program.parse(process.argv)
